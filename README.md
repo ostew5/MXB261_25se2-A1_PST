@@ -4,9 +4,9 @@ This repository used a custom Dockerized JupyterLabs environment with MATLAB to 
 
 The rest of this README contains the rendered report.
 
-> The files from this repository that concern the assignment marking are:
-- MXB261_25se2-A1_PST/Oliver_Stewart-A1_Problem_Solving_Task.MXB261_25se1.pdf
-- MXB261_25se2-A1_PST/Oliver_Stewart-A1_Problem_Solving_Task.MXB261_25se1.m
+**The files from this repository that concern the assignment marking are:**
+- **MXB261_25se2-A1_PST/Oliver_Stewart-A1_Problem_Solving_Task.MXB261_25se1.pdf**
+- **MXB261_25se2-A1_PST/Oliver_Stewart-A1_Problem_Solving_Task.MXB261_25se1.m**
 
 # Assignment 1 - Problem Solving Task
 
@@ -335,5 +335,6 @@ sgtitle('Figure 2.b: True PMF vs. Empirical PMF per. sample size');
 ### Part 2 - Understanding KL Divergence Through Sampling - Analysis
 
 The above plots, *Figure 2.a* and *Figure 2.b* illustrate how the KL Divergence of the Empirical PMF compared to the True PMF decrease and approaches 0 (with $\text{KL Divergence} = 0$ indicating a perfect representation of the True PMF by the Empirical PMF) as more samples are taken from the "black box function" that generates samples according to the True PMF. This is expected as when very few samples are taken from the True PMF (e.g., ten), it is likely, parts of the PMF with very little probability are entirely missed and not represented in the smaller sample size; whereas, if more samples are taken, the likelihood that low probability outcomes of the "black box function" are represented in the larger sample size and can be accounted for correctly when approximating the True PMF.
+
 
 
