@@ -1,3 +1,7 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% Part 1 - A Biased Random Walk - Implementation %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function xys = simulate(N, P, sew)
 % simulate : Function to simulate a biased random walk
 %
@@ -118,6 +122,10 @@ function graph(N, P, figurePrefix)
     sgtitle(sprintf('%s: Random Walk Distribution for N: %d, P: %s', figurePrefix, N, mat2str(P)));
 end
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Part 2 - Understanding KL Divergence Through Sampling - Implementation %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Figures 1.a-b: Random Walk Distribution for N, P
 graph(100, 1, 'Figure 1.a');
 graph(200, 1, 'Figure 1.b');
@@ -134,10 +142,12 @@ true_pmf = Prob_k / sum(Prob_k);
 true_cdf = cumsum(true_pmf);
 
 function sampled = sample(N, true_cdf)
-% sampled : 
+% sample   : Function, gets N samples from true_cdf
 %
 % N        : arg, the number of samples to sample from the cdf
 % true_cdf : arg, the cdf to sample from
+%
+% sampled  : return value, an array containing N samples from true_cdf
     sampled = zeros(N, 1);
     for i = 1:N
         % use a uniform random number to sample PMF
